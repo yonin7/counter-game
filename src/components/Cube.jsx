@@ -10,7 +10,7 @@ const Cube = () => {
     counter && setClearCounter(false);
     setCounter(newCounter);
   };
-  const clearCounterHandler = () => {
+  const resetCounterHandler = () => {
     setClearCounter(true);
   };
 
@@ -22,8 +22,8 @@ const Cube = () => {
 
   return (
     <CounterCubeContainer>
-      <Button onClick={clearCounterHandler}>Clear</Button>
       <CounterCube onClick={counterHandler}>{counter}</CounterCube>
+      <Button onClick={resetCounterHandler}>Reset</Button>
     </CounterCubeContainer>
   );
 };
