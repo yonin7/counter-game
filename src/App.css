@@ -14,3 +14,11 @@
   justify-content: center;
   gap: 100px;
 }
+@media (max-width: 740px) {
+  .App {
+    height: 100%;
+  }
+  .MainContainer {
+    flex-direction: column;
+  }
+}

@@ -12,7 +12,6 @@ function App() {
         />
         <text
           style={{
-            borderRudios: 50,
             fontFamily: "Luckiest Guy",
             width: 500,
             fontSize: "50px",
