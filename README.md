@@ -24,4 +24,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Home Page
 
-! (https://ibb.co/wRWLBkP)
+!(https://ibb.co/wRWLBkP)
