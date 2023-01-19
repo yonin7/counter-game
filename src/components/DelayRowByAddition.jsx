@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Cube from "./Cube";
 
-import { RowContainer } from "./RowStyles";
+import { RowContainer, RowTitle } from "./RowStyles";
 
 const DelayRowByAddition = () => {
   const [clicks, setClicks] = useState(0);
@@ -22,6 +22,7 @@ const DelayRowByAddition = () => {
 
   return (
     <RowContainer>
+      <RowTitle>Count by click's number with 2Sec delay</RowTitle>
       <Cube
         functionality={counterFunctionality}
         delay={true}

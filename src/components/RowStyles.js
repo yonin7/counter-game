@@ -9,3 +9,5 @@ export const RowContainer = styled.section`
     flex-direction: column;
   }
 `;
+
+export const RowTitle = styled.h2``;
