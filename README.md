@@ -1,4 +1,4 @@
-#Welcome to my - Counter Game
+# Welcome to my - Counter Game
 
 At this project I was built a few examples of counter buttons.
 [Link to the Game](https://counter-game-sketch1.netlify.app/)
@@ -24,4 +24,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Home Page
 
-![enter image description here](https://ibb.co/wRWLBkP)
+! (https://ibb.co/wRWLBkP)
