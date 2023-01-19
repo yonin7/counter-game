@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Cube from "./Cube";
 
-import { RowContainer, RowTitle } from "./RowStyles";
+import { RowContainer, RowTitle, ColumnContainer } from "./RowStyles";
 
 const DelayRowByAddition = () => {
   const [clicks, setClicks] = useState(0);
@@ -23,21 +23,23 @@ const DelayRowByAddition = () => {
   return (
     <RowContainer>
       <RowTitle>Count by click's number with 2Sec delay</RowTitle>
-      <Cube
-        functionality={counterFunctionality}
-        delay={true}
-        clicksNumbers={clicksNumbers}
-      />
-      <Cube
-        functionality={counterFunctionality}
-        delay={true}
-        clicksNumbers={clicksNumbers}
-      />
-      <Cube
-        functionality={counterFunctionality}
-        delay={true}
-        clicksNumbers={clicksNumbers}
-      />
+      <ColumnContainer>
+        <Cube
+          functionality={counterFunctionality}
+          delay={true}
+          clicksNumbers={clicksNumbers}
+        />
+        <Cube
+          functionality={counterFunctionality}
+          delay={true}
+          clicksNumbers={clicksNumbers}
+        />
+        <Cube
+          functionality={counterFunctionality}
+          delay={true}
+          clicksNumbers={clicksNumbers}
+        />
+      </ColumnContainer>
     </RowContainer>
   );
 };

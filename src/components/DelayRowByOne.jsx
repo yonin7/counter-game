@@ -1,6 +1,6 @@
 import Cube from "./Cube";
 
-import { RowContainer, RowTitle } from "./RowStyles";
+import { RowContainer, RowTitle, ColumnContainer } from "./RowStyles";
 
 const DelayRowByOne = () => {
   const counterFunctionality = (counter) => counter + 1;
@@ -8,9 +8,11 @@ const DelayRowByOne = () => {
   return (
     <RowContainer>
       <RowTitle>Count by addition 1 with 2Sec delay</RowTitle>
-      <Cube functionality={counterFunctionality} delay={true} />
-      <Cube functionality={counterFunctionality} delay={true} />
-      <Cube functionality={counterFunctionality} delay={true} />
+      <ColumnContainer>
+        <Cube functionality={counterFunctionality} delay={true} />
+        <Cube functionality={counterFunctionality} delay={true} />
+        <Cube functionality={counterFunctionality} delay={true} />
+      </ColumnContainer>
     </RowContainer>
   );
 };
