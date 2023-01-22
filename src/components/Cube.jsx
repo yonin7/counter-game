@@ -1,30 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { CounterCubeContainer, Button, CounterCube } from "./CubeStyles";
 
-const Cube = ({ functionality, delay, clicksNumbers }) => {
+const Cube = ({ functionality, delay }) => {
+  const [clicks, setClicks] = useState(1);
+  const [prevClicks, setPrevClicks] = useState(0);
   const [counter, setCounter] = useState(0);
   const [clearCounter, setClearCounter] = useState(false);
-  const [clicks, setClicks] = useState(0);
 
   const counterHandler = () => {
-    if (clicksNumbers) {
-      setClicks((pervState) => pervState + 1);
-      clicksNumbers(clicks);
-    }
+    setClicks((prevSate) => prevSate + 1);
     if (delay) {
       const timer = setTimeout(() => {
-        const newCounter = functionality(counter);
+        let newCounter = functionality(clicks, counter, prevClicks);
+        setPrevClicks(clicks);
         counter && setClearCounter(false);
-        setCounter((pervStat) => newCounter);
-        if (clicksNumbers) {
-          clicksNumbers(0);
-          setClicks(0);
-        }
-      }, 2000);
+        setCounter(newCounter);
+      }, delay);
       return () => clearTimeout(timer, 1);
     }
+    const newCounter = functionality(clicks, counter);
+
     counter && setClearCounter(false);
-    setCounter((pervState) => pervState + 1);
+    setCounter(newCounter);
   };
 
   const resetCounterHandler = () => {

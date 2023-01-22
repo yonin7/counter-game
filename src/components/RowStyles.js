@@ -23,4 +23,5 @@ export const ColumnContainer = styled.div`
 
 export const RowTitle = styled.h3`
   margin-bottom: 0;
+  color: red;
 `;
