@@ -7,12 +7,21 @@ export const CounterCubeContainer = styled.div`
   flex-direction: column;
 `;
 export const Button = styled.button`
+  position: relative;
   cursor: pointer;
   background-color: rgb(255, 255, 204);
   border: 1px solid black;
   font-size: 1rem;
+  :hover {
+    background: #ffb703;
+    color: #fff;
+  }
+  :active {
+    transform: scale(0.9);
+  }
 `;
 export const CounterCube = styled.button`
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -23,4 +32,13 @@ export const CounterCube = styled.button`
   margin: 20px;
   border: 1px solid black;
   background-color: rgb(255, 255, 204);
+  transition: background 800ms ease, color 800ms ease, transform 500ms ease;
+
+  :hover {
+    background: #ffb703;
+    color: #fff;
+  }
+  :active {
+    transform: scale(0.9);
+  }
 `;
