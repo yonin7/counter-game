@@ -11,7 +11,9 @@ const Cube = ({ clickHandler, cubeNumber, counter, resetCounter }) => {
 
   return (
     <CounterCubeContainer>
-      <CounterCube onClick={counterHandler}>{counter}</CounterCube>
+      <CounterCube onClick={counterHandler}>
+        ${counter.toLocaleString("en-US")}
+      </CounterCube>
       <Button onClick={resetCounterHandler}>Reset</Button>
     </CounterCubeContainer>
   );
